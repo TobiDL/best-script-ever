@@ -7,7 +7,7 @@ res = requests.get('https://www.google.ca/search?q=' + question+' site:stackover
 
 res.raise_for_status()
 
-soup = BeautifulSoup.BeautifulSoup(res.text, "html.parser")
+soup = BeautifulSoup.BeautifulSoup(res.text)
 
 text = str(soup).split()
 
